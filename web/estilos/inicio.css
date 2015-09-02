@@ -1,0 +1,15 @@
+.carousel-inner { 
+	text-align: center; 
+}
+
+.carousel .item > img { 
+	display: inline-block;
+}
+
+html,body{
+  color:white;
+  font-family:'Opens Sans',helvetica;  
+  height:100%;
+  width:100%;
+  margin: 0px;
+}
