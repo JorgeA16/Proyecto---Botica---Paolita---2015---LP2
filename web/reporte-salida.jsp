@@ -31,11 +31,11 @@
 		                Productos <span class="caret"></span>
 		              </a>
 		              <ul class="dropdown-menu" role="menu">
-		                <li><a href="#">Productos#1</a></li>
+		                <li><a href="#">Productos</a></li>
 		                <li class="divider"></li>
-		                <li><a href="#">Productos#2</a></li>
-		                <li><a href="#">Productos#3</a></li>
-		                <li><a href="#">Productos#4</a></li>
+		                <li><a href="#">Lista</a></li>
+		                <li><a href="#">Catalogo</a></li>
+		                <li><a href="#"></a></li>
 		                <li><a href="#">Productos#5</a></li>
 		              </ul>
 		            </li>
