@@ -1,0 +1,17 @@
+.carousel-inner { 
+	text-align: center; 
+}
+
+nav .carousel img {
+	max-width: 1000px;
+	max-height: 1500px;
+}
+
+html,body{
+  color:white;
+  font-family:'Opens Sans',helvetica;  
+  height:100%;
+  width:100%;
+  margin: 0px;
+}
+

@@ -1,0 +1,24 @@
+
+        <link rel="stylesheet" type="text/javascript" 
+        href="estilos/4.css">
+<footer>
+            <div class="contenedor">
+                
+                <div class="sociales">
+                <p class="copy">Botica Paolita &copy; 2015</p>
+                    <a href="#"><img src="icon/ico-facebook.ico" alt="" width="24" height="24"></a>
+                    <a href="#"><img src="icon/twitter.ico" alt="" width="24" height="24"></a>
+                    <a href="#"><img src="icon/instagram.ico" alt="" width="24" height="24"></a>
+                    <a href="#"><img src="icon/google.ico" alt="" width="24" height="24"></a>
+                </div>
+            </div>
+        </footer>
+
+		<script type="text/javascript" 
+        	src="jquery/jquery-2.1.4.min.js" 
+        	></script>
+        <script type="text/javascript" 
+        	src="bootstrap/js/bootstrap.min.js" 
+        	></script>
+    </body>
+</html>
