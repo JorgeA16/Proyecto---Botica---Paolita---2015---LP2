@@ -116,23 +116,3 @@
     .hero h1 { font-size: 4em; }   
 }
 
-.sociales {
-  width: 100%;
-  text-align: center;
-  font-size: 28px;
-}
-
-.sociales a {
-  color: #333;
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  .sociales {
-    width: auto;
-  }
-
-  footer .contenedor {
-    justify-content: space-between;
-  }
-}

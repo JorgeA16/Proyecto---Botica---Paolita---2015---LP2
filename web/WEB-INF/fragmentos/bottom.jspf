@@ -44,7 +44,7 @@
 		              </a>
 		              <ul class="dropdown-menu" role="menu">
 		                <li><a href="reporte-venta.html">Reporte de Ventas</a></li>
-		                <li><a href="reporte-compra.html">Reporte de Compras</a></li>
+		                <li><a href="reporte-salida.html">Reporte de Compras</a></li>
 		              </ul>
 		            </li>
 		          </ul>
@@ -73,8 +73,8 @@
 		                                        </p>
 		                                    </div>
 		                                    <div class="col-lg-8">
-		                                        <p class="text-left"><strong>Nombre Apellido</strong></p>
-		                                        <p class="text-left small">correoElectronico@email.com</p>
+		                                        <p class="text-left"><strong>Jorge Polo</strong></p>
+		                                        <p class="text-left small">jorgepolo@gmail.com</p>
 		                                        <p class="text-left">
 		                                            <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
 		                                        </p>

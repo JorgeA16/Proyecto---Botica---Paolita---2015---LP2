@@ -13,7 +13,8 @@
           		<form class="form">
           			<input type="text" placeholder="Username">
           			<input type="password" placeholder="Password">
-                                  <a href="inicio.jsp"><button type="submit" id="login-button" role="toolbar">Login</button></a>
+                      <!-- <button type="submit" id="login-button" onclick="inicio.jsp">Login</button>-->
+                      <input type="button-submit" onclick=" location.href='inicio.jsp' " value="Ingresar" name="Ingresar" /> 
           		</form>
             </div>
               <ul class="bg-bubbles">
