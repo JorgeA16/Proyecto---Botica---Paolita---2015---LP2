@@ -1,6 +1,6 @@
 package DaoImpl;
 
-import Conexion.ConexionPostgres;
+import Conexion.Conexion;
 import Dao.PersonaDao;
 import Entidad.Persona;
 import java.sql.Connection;
@@ -11,33 +11,8 @@ import java.util.List;
 
 
 public class PersonaDaoImpl implements PersonaDao{
-    
-    public Connection conexion(){
-        Connection cn = ConexionPostgres.conecta();
-        return cn;
-    }
-    
-    public void cerrar(){
-        try {
-            ConexionPostgres.conecta();
-            
-        } catch (Exception e) {
-        }
-    }
-    
-    public void guardar(){
-        try {
-            ConexionPostgres.conecta().commit();
-        } catch (Exception e) {
-        }
-    }
-    
-    public void restablecer(){
-        try {
-            ConexionPostgres.conecta().rollback();
-        } catch (Exception e) {
-        }
-    }
+//    ConexionPostgres cn = new ConexionPostgres();
+    Conexion cn = Conexion.getInstance();
 
     @Override
     public boolean agregarPersona(Persona persona) {
@@ -48,26 +23,23 @@ public class PersonaDaoImpl implements PersonaDao{
                                                         "','"+persona.getDni()+"','"+persona.getSexo()+
                                                         "')";
         try {
-            st = conexion().createStatement();
+            st = cn.conexion().createStatement();
             st.executeUpdate(query);
-            conexion().setAutoCommit(false);
-            guardar();
-            cerrar();
+            cn.conexion().setAutoCommit(false);
+            cn.guardar();
             flat = true;
         } catch (Exception e) {
             System.out.println("Error : "+e.getMessage());
             e.printStackTrace();
             flat = true;
             try {
-            restablecer();
-            cerrar();
+            cn.restablecer();
             } catch (Exception ex) {
             }
         }finally{
-            if (conexion() != null) {
+            if (cn.conexion() != null) {
                 try {
-                    restablecer();
-                    cerrar();
+                    cn.restablecer();
                 } catch (Exception e) {
                 }
             }
@@ -84,9 +56,9 @@ public class PersonaDaoImpl implements PersonaDao{
         String query = "Select id_persona, nombre, apepat, apemat, celular, dni, genero FROM persona";
         try {
             Lista = new ArrayList<>();
-            st = conexion().createStatement();
+            st = cn.conexion().createStatement();
             rs = st.executeQuery(query);
-            cerrar();
+//            cn.cerrar();
             while (rs.next()) {                
                 persona = new Persona();
                 persona.setId_persona(rs.getInt("id_persona"));
@@ -102,7 +74,7 @@ public class PersonaDaoImpl implements PersonaDao{
             System.out.println("Error: "+e.getMessage());
             e.printStackTrace();
             try {
-                cerrar();
+//                cn.cerrar();
             } catch (Exception ex) {
             }
         }
@@ -123,33 +95,33 @@ public class PersonaDaoImpl implements PersonaDao{
                        "' WHERE id_persona = "+persona.getId_persona();
         
         try {
-            st = conexion().createStatement();
+            st = cn.conexion().createStatement();
             st.executeUpdate(query);
-            guardar();
-            cerrar();
+            cn.guardar();
+//            cn.cerrar();
             flat = true;
         } catch (Exception e) {
-            restablecer();
-            cerrar();
+            cn.restablecer();
+//            cn.cerrar();
             System.out.println("ERROR: "+e.getMessage());
         }finally{
-            if (conexion() != null) {
-                cerrar();
+            if (cn.conexion() != null) {
+//                cn.cerrar();
             }
         }
         return flat;
     }
 
     @Override
-    public Persona buscarPersonaId(long id_persona) {
+    public Persona buscarPersonaId(int id_persona) {
         Persona persona = null;
         String query = "SELECT * FROM persona WHERE id_persona = "+id_persona;
         Statement st = null;
         ResultSet rs = null;
         try {
-            st = conexion().createStatement();
+            st = cn.conexion().createStatement();
             rs = st.executeQuery(query);
-            cerrar();
+//            cn.cerrar();
             if (rs.next()) {
                 persona = new Persona();
                 persona.setId_persona(rs.getInt("id_persona"));
@@ -162,13 +134,13 @@ public class PersonaDaoImpl implements PersonaDao{
             }
         } catch (Exception e) {
             try {
-                cerrar();
+//                cn.cerrar();
             } catch (Exception ex) {
                 System.out.println("ERROR: "+e.getMessage());
                 ex.printStackTrace();
             }finally{
-                if (conexion() != null) {
-                    cerrar();
+                if (cn.conexion() != null) {
+//                    cn.cerrar();
                 }
             }
         }
@@ -176,23 +148,23 @@ public class PersonaDaoImpl implements PersonaDao{
     }
 
     @Override
-    public boolean eliminarPersona(long id_persona) {
+    public boolean eliminarPersona(int id_persona) {
         boolean flat = false;
         Statement st = null;
         String query = "DELETE FROM persona WHERE id_persona="+id_persona+";";
         try {
-            st = conexion().createStatement();
+            st = cn.conexion().createStatement();
             st.executeUpdate(query);
-            guardar();
-            cerrar();
+            cn.guardar();
+//            cn.cerrar();
             flat = true;
         } catch (Exception e) {
-            restablecer();
-            cerrar();
+            cn.restablecer();
+//            cn.cerrar();
             System.out.println("ERROR: "+e.getMessage());
         }finally{
-            if (conexion() != null) {
-                cerrar();
+            if (cn.conexion() != null) {
+//                cn.cerrar();
             }
         }
         return flat;

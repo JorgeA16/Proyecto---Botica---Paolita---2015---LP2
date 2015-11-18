@@ -3,7 +3,7 @@ package Entidad;
 import java.io.Serializable;
 
 
-public class Seccion implements Serializable{
+public class Seccion extends Categoria{
     private int id_seccion;
     private int estado;
     private int id_categoria;

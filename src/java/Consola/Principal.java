@@ -1,10 +1,13 @@
 package Consola;
 
 import Dao.PersonaDao;
+import Dao.ProductoDao;
 import Dao.UsuarioDao;
 import DaoImpl.PersonaDaoImpl;
+import DaoImpl.ProductoDaoImpl;
 import DaoImpl.UsuarioDaoImpl;
 import Entidad.Persona;
+import Entidad.Producto;
 import Entidad.Usuario;
 import java.util.List;
 import java.util.Scanner;
@@ -16,6 +19,7 @@ public class Principal {
     public static void main(String[] args) {
         Principal p = new Principal();
         //p.agregarPersona();
+        p.mostrarproducto();
         //p.listarPersona();
         //p.actualizarPersona();
         //p.buscarPersonaId();
@@ -116,5 +120,13 @@ public class Principal {
         Usuario usuario = new Usuario();
         usuario = dao.validarUsuario("jorge", "123");
         System.out.println("Usuario: "+usuario.getUsuario());
+    }
+    public void mostrarproducto(){
+        ProductoDao dao=new ProductoDaoImpl();
+        for (Producto usa :dao.listarProducto("")) {
+            
+            System.out.println("NOMBRE: "+usa.getNombre_producto());
+        }
+    
     }
 }

@@ -1,73 +1,88 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" 
-        href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/javascript" 
-        href="estilos/5.css">
-    </head>
+
+<%@include file="WEB-INF/fragmentos/top.jspf"%>
 
 
-<!-- line modal -->
-<div class="modal fade" id="squarespaceModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-            <h3 class="modal-title" id="lineModalLabel">My Modal</h3>
-        </div>
-        <div class="modal-body">
-            
-            <!-- content goes here -->
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <p class="help-block">Example block-level help text here.</p>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Check me out
-                </label>
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
 
-        </div>
-        <div class="modal-footer">
-            <div class="btn-group btn-group-justified" role="group" aria-label="group button">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"  role="button">Close</button>
-                </div>
-                <div class="btn-group btn-delete hidden" role="group">
-                    <button type="button" id="delImage" class="btn btn-default btn-hover-red" data-dismiss="modal"  role="button">Delete</button>
-                </div>
-                <div class="btn-group" role="group">
-                    <button type="button" id="saveImage" class="btn btn-default btn-hover-green" data-action="save" role="button">Save</button>
-                </div>
-            </div>
-        </div>
+<link rel="stylesheet" type="text/css"  href="estilos/venta.css">
+<div class="col-lg-4"></div>
+<div class="col-lg-4">
+<div class="modal-body">
+    <div class="form-group">
+        <label for="exampleInputPassword1">Nombres</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Npmbre">
     </div>
-  </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Apellidos</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellidos">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">DNI</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Sexo">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Celular</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Celular">
+    </div>
+    <select class="form-control" name="Sexo" value="Sexo">
+        <option>Sexo</option>
+        <option>M</option>
+        <option>F</option>
+    </select>
+<br>
+    <div class="form-group">
+    <tr>
+    <td colspan="2" align="center">
+        <input type="submit" class="btn btn-primary" value="Registrar"> 
+        <input type="reset" class="btn btn-default" value="Limpiar">
+        <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button> 
+    </td>
+</tr>
+</div>
+</div>
+<div class="col-lg-4"></div>
 
-		<script type="text/javascript" 
-        	src="jquery/jquery-2.1.4.min.js" 
-        	></script>
-        <script type="text/javascript" 
-        	src="bootstrap/js/bootstrap.min.javascript" 
-        	></script>
-            <script type="text/javascript" src="demo.js"></script>
-            <script>!window.jQuery && document.write(unescape('%3Cscript src=”jquery-1.7.1.min.js”%3E%3C/script%3E'))</script>
-    </body>
-</html>
+<!--<<div class="modal fade" id="venta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="venta">venta</h1>
+      </div>
+      <div class="modal-body">
+      <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">DNI</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="INGRESE DNI">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">NOMBRE</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="INGRESE NOMBRE">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">APELLIDO PATERNO</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="INGRESE APELLIDO">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">APELLIDO MATERNO</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="INGRESE APELLIDO">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">TELEFONO</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="TELEFONO">
+  </div>
+      <div class="form-group">
+    <label for="exampleInputPassword1">GENERO</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="GENERO">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">FECHA DE NACIMIENTO: </label>
+    <input type="date">
+  </div>
+ 
+  </form>
+      </div>-->
+
+ 
+
+<%@include file="WEB-INF/fragmentos/bottom.jspf"%>

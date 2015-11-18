@@ -16,3 +16,14 @@
 {
     font-size: 87px;
 }
+header {
+	width: 100%;
+	height: 45px;
+	background: #333;
+	color: #fff;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}

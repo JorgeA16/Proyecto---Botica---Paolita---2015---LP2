@@ -3,7 +3,7 @@ package Entidad;
 import java.io.Serializable;
 
 
-public class Producto implements Serializable{
+public class Producto extends Seccion{
     private int id_producto;
     private String nombre_producto;
     private int cantidad;
@@ -14,9 +14,10 @@ public class Producto implements Serializable{
     private int id_seccion;
     private int id_unidad_medida;
 
-    public Producto() {
+    public Producto()  {
     }
 
+    
     public int getId_producto() {
         return id_producto;
     }

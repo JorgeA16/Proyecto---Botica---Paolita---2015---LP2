@@ -9,145 +9,91 @@
         <script rel="stylesheet" type="text/javascript" src="estilos/5.css"></script>
     </head>
     <body>
-    	<header>
-		    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-		      <div class="container">
-		        <div class="navbar-header">
-		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
-		            <span class="sr-only">Desplegar / Ocultar Menu</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </button>
-		          <a href="#" class="navbar-brand">BoticaPaolita</a>
-		        </div>
-		        <!-- Inicia Menu -->
-		        <div class="collapse navbar-collapse" id="navegacion-fm">
-		          <ul class="nav navbar-nav">
-		            <li class="active"><a href="#" class="glyphicon glyphicon-home">Inicio</a></li>
-		            <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span>
-		              </a>
-		             <ul class="dropdown-menu">
-		                <li><a href="#">Pastillas</a></li>
-		                <li class="divider"></li>
-		                <li><a href="#">Jarabes</a></li>
-		              </ul>
-		            </li>
-		            <li><a href="#venta" class="glyphicon glyphicon-usd" data-toggle="modal">Venta</a></li>
-		            <li><a href="#" class="glyphicon glyphicon-shopping-cart">Compra</a></li>
-		             <li class="dropdown">
-		              <a href="#"  class="glyphicon glyphicon-list-alt" class="dropdown-toggle" data-toggle="dropdown" role="button">
-		                Reportes <span class="caret"></span>
-		              </a>
-		              <ul class="dropdown-menu" role="menu">
-                                  <li><a  href="reporte-venta.jsp">Reporte de Ventas</a></li>
-                                  <li><a href="reporte-salida.jsp">Reporte de Compras</a></li>
-		              </ul>
-		            </li>
-		          </ul>
+        <header>
+            <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+                            <span class="sr-only">Desplegar / Ocultar Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="inicio.jsp" class="navbar-brand">BoticaPaolita</a>
+                    </div>
+                    <!-- Inicia Menu -->
+                    <div class="collapse navbar-collapse" id="navegacion-fm">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="inicio.jsp" class="glyphicon glyphicon-home">Inicio</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="reg_producto.jsp">Registrar Producto</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="venta_cliente.jsp" class="glyphicon glyphicon-usd" >Venta</a></li>
+                            <li><a href="#" class="glyphicon glyphicon-shopping-cart">Compra</a></li>
+                            <li class="dropdown">
+                                <a href="#"  class="glyphicon glyphicon-list-alt" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                    Reportes <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a  href="reporte-venta.jsp">Reporte de Ventas</a></li>
+                                    <li><a href="reporte-salida.jsp">Reporte de Compras</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                            <ul class="nav navbar-nav navbar-right" style="  padding-right:  5px;">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        <strong>Usuario</strong>
+                                        <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="navbar-login">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <p class="text-center">
+                                                            <span class="glyphicon glyphicon-user icon-size"></span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <p class="text-left"><strong>Jorge</strong></p>
+                                                        <p class="text-left">
+                                                            <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <div class="navbar-login navbar-login-session">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <p>
+                                                            <a href="login.jsp?salir=cerrar" class="btn btn-danger btn-block">Cerrar Sesion</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </nav>
 
-		          <form action="" class="navbar-form navbar-right" role="search">
-		            <div class="form-group">
-		              <input type="text" class="form-control" placeholder="buscar">
-		            </div>
-		            <button type="submit" class="btn btn-primary">
-		              <span class="glyphicon glyphicon-search"></span>
-		            </button>
-		            <ul class="nav navbar-nav navbar-right">
-		                <li class="dropdown">
-		                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-		                        <span class="glyphicon glyphicon-user"></span>
-		                        <strong>Nombre</strong>
-		                        <span class="glyphicon glyphicon-chevron-down"></span>
-		                    </a>
-		                    <ul class="dropdown-menu">
-		                        <li>
-		                            <div class="navbar-login">
-		                                <div class="row">
-		                                    <div class="col-lg-4">
-		                                        <p class="text-center">
-		                                            <span class="glyphicon glyphicon-user icon-size"></span>
-		                                        </p>
-		                                    </div>
-		                                    <div class="col-lg-8">
-		                                        <p class="text-left"><strong>Jorge Polo</strong></p>
-		                                        <p class="text-left small">jorgepolo@gmail.com</p>
-		                                        <p class="text-left">
-		                                            <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
-		                                        </p>
-		                                    </div>
-		                                </div>
-		                            </div>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <div class="navbar-login navbar-login-session">
-		                                <div class="row">
-		                                    <div class="col-lg-12">
-		                                        <p>
-		                                            <a href="#" class="btn btn-danger btn-block">Cerrar Sesion</a>
-		                                        </p>
-		                                    </div>
-		                                </div>
-		                            </div>
-		                        </li>
-		                    </ul>
-		                </li>
-		            </ul>
-		          </form>
-
-
-		        </div>
-		      </div>
-
-		    </nav>
-		    <!-- Ventana Emergente - Venta-->
-	<div class="container">
-
-        	<div class="modal fade" id="venta">
-        		<div class="model-dialog">
-        			<div class="modal-content">
-        				<!-- Header de la Ventana-->
-        				<div class="modal-header">
-        					<button type="button" class="close" data-dismiss="modal" aria-hiden="true">&times;</button>
-        					<h4 class="modal-title">Venta</h4>
-        				</div>
-        				<!-- Contenido de la Ventana-->
-        				<div class="modal-body">
-        					<form role="form">
-							  	<div class="form-group">
-							    	<label for="ejemplo_email_1">Nombre</label>
-							    	<input type="email" class="form-control" id="ejemplo_email_1"
-							           placeholder="Nombre">
-							  	</div>
-							  	<div class="form-group">
-							    	<label for="ejemplo_password_1">Producto</label>
-							    	<input type="password" class="form-control" id="ejemplo_password_1" 
-							           placeholder="Prodducto">
-							  	</div>
-							  	<div class="form-group">
-							    	<label for="ejemplo_password_1">Cantidad</label>
-							    	<input type="password" class="form-control" id="ejemplo_password_1" 
-							           placeholder="Cantidad">
-							  	</div>
-							  	<div class="form-group">
-							    	<label for="ejemplo_password_1">Fecha</label>
-							    	<input type="password" class="form-control" id="ejemplo_password_1" 
-							           placeholder="Fecha">
-							  	</div>
-							  	
-							  	
-							  		<button type="button" class="btn btn-primary">Enviar Compra</button>
-							</form>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </div>
-		</header>
+        </header>
         <%
-    if(session.getAttribute("ususario") == null){
-        response.sendRedirect("login.jsp");
-    }
-    %>
+
+            if (session.getAttribute("usuario") == null) {
+                response.sendRedirect("login.jsp");
+            }
+
+        %>
+        <div style="margin-top: 100px;"></div>
