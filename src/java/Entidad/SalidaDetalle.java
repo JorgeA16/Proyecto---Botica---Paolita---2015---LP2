@@ -1,7 +1,7 @@
 package Entidad;
 
 
-public class Salida_Detalle {
+public class SalidaDetalle {
     private int id_lote_interno;
     private int id_salida;
     private int cantidad;
@@ -11,7 +11,7 @@ public class Salida_Detalle {
     private int id_unidad;
     private int descuento;
 
-    public Salida_Detalle() {
+    public SalidaDetalle() {
     }
 
     public int getId_lote_interno() {

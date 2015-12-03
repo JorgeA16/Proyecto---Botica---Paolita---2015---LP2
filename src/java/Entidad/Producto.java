@@ -13,9 +13,24 @@ public class Producto extends Seccion{
     private String composicion;
     private int id_seccion;
     private int id_unidad_medida;
+    private String abreviatura;
+    private String nombre_unidad;
 
-    public Producto()  {
+
+    
+    public Producto() {
+        this.nombre_producto = "";
+        this.cantidad = 0;
+        this.codigo = 0;
+        this.estado = 1;
+        this.composicion = "";
+        this.id_seccion = 0;
+        this.id_unidad_medida = 0;
+        this.abreviatura= "";
+        this.nombre_unidad= "";
     }
+    
+    
 
     
     public int getId_producto() {
@@ -90,5 +105,20 @@ public class Producto extends Seccion{
         this.nombre_producto = nombre_producto;
     }
 
+    public String getAbreviatura() {
+        return abreviatura;
+    }
+
+    public void setAbreviatura(String abreviatura) {
+        this.abreviatura = abreviatura;
+    }
+
+    public String getNombre_unidad() {
+        return nombre_unidad;
+    }
+
+    public void setNombre_unidad(String nombre_unidad) {
+        this.nombre_unidad = nombre_unidad;
+    }
     
 }

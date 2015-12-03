@@ -1,3 +1,9 @@
+<%@page import="Entidad.Seccion"%>
+<%@page import="DaoImpl.SeccionDaoImpl"%>
+<%@page import="Dao.SeccionDao"%>
+<%@page import="DaoImpl.UnidadMedidaDaoImpl"%>
+<%@page import="Dao.UnidadMedidaDao"%>
+<%@page import="Entidad.UnidadMedida"%>
 <%@page import="java.util.Date"%>
 <%@page import="DaoImpl.ProductoDaoImpl"%>
 <%@page import="Dao.ProductoDao"%>
@@ -9,10 +15,14 @@ String nombre=request.getParameter("nombre");
 String cantidad=request.getParameter("cantidad");
 String Composicion=request.getParameter("Composicion");
 String fecha=request.getParameter("fecha");
+
+UnidadMedidaDao unim = new UnidadMedidaDaoImpl();
+UnidadMedida uni = new UnidadMedida();
 String unime=request.getParameter("unime");
-String sec=request.getParameter("sec");
 
-
+SeccionDao secc = new SeccionDaoImpl();
+Seccion sec = new Seccion();
+String  secci=request.getParameter("secci");
 
 pro.setNombre_producto(nombre);
 
@@ -24,10 +34,10 @@ pro.setComposicion(Composicion);
 pro.setFecha_ven(fecha);
 
 int inu=Integer.parseInt(unime);
-pro.setId_unidad_medida(inu);
+uni.setId_unidad_medida(inu);
 
-int se=Integer.parseInt(sec);
-pro.setId_seccion(se);
+int se=Integer.parseInt(secci);
+sec.setId_seccion(se);
 
 if(dao.agregarProducto(pro))
 {

@@ -1,12 +1,12 @@
 package Entidad;
 
 
-public class Unidad_Medida {
+public class UnidadMedida {
     private int id_unidad_medida;
     private String nombre_unida_med;
     private String abreviatura;
 
-    public Unidad_Medida() {
+    public UnidadMedida() {
     }
 
     public int getId_unidad_medida() {

@@ -19,24 +19,25 @@ public class Principal {
     public static void main(String[] args) {
         Principal p = new Principal();
         //p.agregarPersona();
-        p.mostrarproducto();
+        //p.mostrarproducto();
         //p.listarPersona();
         //p.actualizarPersona();
         //p.buscarPersonaId();
         //p.eliminarPersona();
         //p.validarUsuario();
+        p.listarProductoFecha();
     }
     
     public void agregarPersona(){
         PersonaDao dao = new PersonaDaoImpl();
         Persona persona = new Persona();
         
-        persona.setId_persona(1);
+//        persona.setId_persona(1);
         persona.setNombre("Marcia");
         persona.setApepat("Herrera");
         persona.setApemat("Ocampo");
-        persona.setCelular(952451872);
-        persona.setDni(10254896);
+//        persona.setCelular(952451872);
+//        persona.setDni(10254896);
         persona.setSexo("F");
         
         if (dao.agregarPersona(persona)) {
@@ -69,8 +70,8 @@ public class Principal {
         persona.setNombre("Edwin");
         persona.setApepat("Alcantara");
         persona.setApemat("Garcia");
-        persona.setCelular(987654321);
-        persona.setDni(79415232);
+//        persona.setCelular(987654321);
+//        persona.setDni(79415232);
         persona.setSexo("M");
         
         if (dao.actualizarPersona(persona)) {
@@ -106,7 +107,7 @@ public class Principal {
         System.out.println("Ingrese ID de Persona a Eliminar");
         int id = sc.nextInt();
         persona = dao.buscarPersonaId(id);
-        persona.setId_persona(id);
+//        persona.setId_persona(id);
         if (dao.eliminarPersona(id)) {
             System.out.println("Se Elimino Correctamente");
         } else {
@@ -128,5 +129,18 @@ public class Principal {
             System.out.println("NOMBRE: "+usa.getNombre_producto());
         }
     
+    }
+    public void listarProductoFecha(){
+        ProductoDao dao = new ProductoDaoImpl();
+        List<Producto> lista = dao.listarProductoFecha("2015-11-24", "2020-11-26");
+//        Producto pro = new Producto();
+        for (Producto p : lista){
+            System.out.println("Id: "+p.getId_producto()+
+                               " Nombre Producto: "+p.getNombre_producto()+
+                               " Cantidad: "+p.getCantidad()+
+                               " Fecha Vencimiento: "+p.getFecha_ven()+
+                               " Abreviatura: "+p.getAbreviatura()+
+                               " Categoria: "+p.getNombre_categoria());
+        }
     }
 }

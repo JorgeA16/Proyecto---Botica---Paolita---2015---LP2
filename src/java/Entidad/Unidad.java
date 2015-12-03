@@ -2,19 +2,19 @@ package Entidad;
 
 
 public class Unidad {
-    private int id_unidad;
+    private String id_unidad;
     private String nombre_unidad;
     private String abreviatura;
-    private int estado;
+    private String estado;
 
     public Unidad() {
     }
 
-    public int getId_unidad() {
+    public String getId_unidad() {
         return id_unidad;
     }
 
-    public void setId_unidad(int id_unidad) {
+    public void setId_unidad(String id_unidad) {
         this.id_unidad = id_unidad;
     }
 
@@ -34,11 +34,11 @@ public class Unidad {
         this.abreviatura = abreviatura;
     }
 
-    public int getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(int estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 }

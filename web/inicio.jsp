@@ -1,6 +1,11 @@
     <%@include file="WEB-INF/fragmentos/top.jspf"%>
-    <nav class="carousel">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin: center">
+    <style>
+        img{
+            width: 100%;
+        }
+    </style>
+    <nav class="carousel" style="height: 562px; padding-bottom: -50px;">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin: center; height:562px;  margin-top:-50px;">
         <!-- Indicadores -->
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -11,13 +16,13 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="img/img1.jpg" alt="">
+              <img src="img/img1.jpg" alt=""  style="height: 562px;">
             <div class="carousel-caption">
               
             </div>
           </div>
           <div class="item">
-            <img src="img/img2.jpg" alt="">
+            <img src="img/img2.jpg" alt="" style="height: 562px;">
             <div class="carousel-caption">
             </div>
           </div>

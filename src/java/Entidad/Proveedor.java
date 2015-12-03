@@ -6,8 +6,8 @@ import java.io.Serializable;
 public class Proveedor implements Serializable{
     private int id_proveedor;
     private String nombre;
-    private int ruc;
-    private int celular;
+    private String ruc;
+    private String celular;
     private String direccion;
 
     public Proveedor() {
@@ -29,19 +29,19 @@ public class Proveedor implements Serializable{
         this.nombre = nombre;
     }
 
-    public int getRuc() {
+    public String getRuc() {
         return ruc;
     }
 
-    public void setRuc(int ruc) {
+    public void setRuc(String ruc) {
         this.ruc = ruc;
     }
 
-    public int getCelular() {
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
 

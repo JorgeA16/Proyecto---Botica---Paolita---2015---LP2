@@ -5,23 +5,15 @@ import java.io.Serializable;
 
 public class Persona implements Serializable{
     
-    private int id_persona;
+    private String id_persona;
     private String nombre;
     private String apepat;
     private String apemat;
-    private int celular;
-    private int dni;
+    private String celular;
+    private String dni;
     private String sexo;
 
     public Persona() {
-    }
-
-    public int getId_persona() {
-        return id_persona;
-    }
-
-    public void setId_persona(int id_persona) {
-        this.id_persona = id_persona;
     }
 
     public String getNombre() {
@@ -48,19 +40,27 @@ public class Persona implements Serializable{
         this.apemat = apemat;
     }
 
-    public int getCelular() {
+    public String getId_persona() {
+        return id_persona;
+    }
+
+    public void setId_persona(String id_persona) {
+        this.id_persona = id_persona;
+    }
+
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 

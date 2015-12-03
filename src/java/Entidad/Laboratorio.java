@@ -4,18 +4,18 @@ import java.io.Serializable;
 
 
 public class Laboratorio implements Serializable{
-    private int id_laboratorio;
+    private String id_laboratorio;
     private String nombre_laboratorio;
-    private int estado;
+    private String estado;
 
     public Laboratorio() {
     }
 
-    public int getId_laboratorio() {
+    public String getId_laboratorio() {
         return id_laboratorio;
     }
 
-    public void setId_laboratorio(int id_laboratorio) {
+    public void setId_laboratorio(String id_laboratorio) {
         this.id_laboratorio = id_laboratorio;
     }
 
@@ -27,11 +27,11 @@ public class Laboratorio implements Serializable{
         this.nombre_laboratorio = nombre_laboratorio;
     }
 
-    public int getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(int estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 }

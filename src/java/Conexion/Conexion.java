@@ -129,7 +129,4 @@ public class Conexion {
 
     }
 
-    public void cerrar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

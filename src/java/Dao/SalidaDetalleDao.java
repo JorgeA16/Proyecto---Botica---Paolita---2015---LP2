@@ -1,12 +1,12 @@
 package Dao;
 
-import Entidad.Salida_Detalle;
+import Entidad.SalidaDetalle;
 import java.util.List;
 
 
 public interface SalidaDetalleDao {
-    public boolean agregarSalidaDetalle(Salida_Detalle salida_detalle);
-    public boolean actualizarSalidaDetalle(Salida_Detalle salida_detalle);
+    public boolean agregarSalidaDetalle(SalidaDetalle salida_detalle);
+    public boolean actualizarSalidaDetalle(SalidaDetalle salida_detalle);
     public boolean eliminarSalidaDetalle(int id_lote_interno);
-    public List<Salida_Detalle> listarSalidaDetalle();
+    public List<SalidaDetalle> listarSalidaDetalle();
 }

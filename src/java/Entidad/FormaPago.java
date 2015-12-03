@@ -1,11 +1,11 @@
 package Entidad;
 
 
-public class Forma_Pago {
+public class FormaPago {
     private int id_forma_pago;
     private String nombre_forma_pago;
 
-    public Forma_Pago() {
+    public FormaPago() {
     }
 
     public int getId_forma_pago() {

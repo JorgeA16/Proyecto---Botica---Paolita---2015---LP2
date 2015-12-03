@@ -30,14 +30,11 @@
         <option>F</option>
     </select>
 <br>
-    <div class="form-group">
-    <tr>
-    <td colspan="2" align="center">
+    <div class="form-group" colspan="2" align="center">
         <input type="submit" class="btn btn-primary" value="Registrar"> 
         <input type="reset" class="btn btn-default" value="Limpiar">
         <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button> 
-    </td>
-</tr>
+    
 </div>
 </div>
 <div class="col-lg-4"></div>
